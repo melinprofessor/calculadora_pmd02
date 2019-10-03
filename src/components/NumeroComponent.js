@@ -15,7 +15,7 @@ const NumeroComponent = props => {
         <TextInput
         style={estilo.numero}
         keyboardType={'numeric'}
-        value={props.numero1.toString()}
+        value={props.numero.toString()}
         onChangeText ={ (text)=> {props.onChangeTextHandler(props.nome, parseFloat(text || 0))}}
         />
     )

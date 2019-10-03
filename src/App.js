@@ -11,14 +11,22 @@ import {
   View,
 } from 'react-native';
 
-import {LogoComponent, ResultadoComponent} from './components'
+import {
+  LogoComponent, 
+  ResultadoComponent, 
+  PainelComponent} from './components'
 
 const App = () => {
   const [resultado, setResultado] = useState(0)
+
+  const resultadoFinal = resultado => {
+    setResultado(resultado);
+  }
   return (
     <View>
       <LogoComponent />
       <ResultadoComponent resultado={resultado} />
+      <PainelComponent resultado={resultadoFinal}/>
     </View>
   );
 };
